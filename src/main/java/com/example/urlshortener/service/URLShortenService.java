@@ -20,7 +20,8 @@ public class URLShortenService implements URLShortenServiceInterface {
             if (!exists) {
                 return shortenedURL;
             } else if (i == 9) {
-                digitService.increaseStringLength();
+                length = digitService.increaseStringLength();
+                return generateRandomString(length);
             }
         }
     }
